@@ -1,0 +1,90 @@
+@extends('layouts.layout')
+@section('content')
+<div class="main-content">
+        <section class="section">
+          <div class="section-header">
+            <h1>{{$pageName}} Table</h1>
+            <div class="section-header-breadcrumb">
+              <div class="breadcrumb-item active"><a href="#">Beranda</a></div>
+              <div class="breadcrumb-item"><a href="#">Biaya Pengiriman</a></div>
+              <div class="breadcrumb-item">Form</div>
+            </div>
+          </div>
+
+          <div class="section-body">
+            <!-- <h2 class="section-title">Table</h2>
+            <p class="section-lead">Example of some Bootstrap table components.</p> -->
+
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-6">
+              <form method="post" action="{{url('biaya_pengiriman/update/'.$data->id)}}">
+                @method('put')
+                  @csrf
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Data {{$pageName}}</h4>
+                    <div class="card-header-action">
+                      <a href="{{url('biaya_pengiriman')}}" class="btn btn-success">Kembali</a>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                      <x-alert></x-alert>
+                    
+                        <div class="form-group">
+                            <label>Nama Daerah / Desa etc</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fa fa-font"></i>
+                                    </div>
+                                </div>
+                                <input type="text" name="nama" id="name" value="{{$data->nama}}" class="form-control phone-number">
+                            </div>
+                            
+                        </div>
+                        <div class="form-group">
+                            <label>Deskripsi</label>
+                            <div class="input-group">
+                               
+                                <textarea cols="50" rows="8" name="deskripsi" class="form-control">{{$data->deskripsi}}</textarea>
+                            </div>
+                            
+                        </div>
+                        <div class="form-group">
+                          <label>Harga Pengiriman</label>
+                          <div class="input-group">
+                              <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fa fa-font"></i>
+                                </div>
+                            </div>
+                            <input type="number" name="harga" id="name" value="{{$data->harga}}" class="form-control phone-number">
+                          </div>
+                          
+                      </div>
+                    
+                  </div>
+                  <div class="card-footer text-right">
+                    <nav class="d-inline-block">
+                      <button type="submit" class="btn btn-molar">Submit</button>
+                    </nav>
+                  </div>
+
+                </div>
+                </form>
+              </div>
+              
+            
+           
+          </div>
+        </section>
+      </div>
+      <script>
+          document.onreadystatechange = ()=>{
+              if(document.readyState==='complete'){
+                  $('#alert').fadeOut(5000);
+              }
+          }
+          
+    </script>
+@endsection

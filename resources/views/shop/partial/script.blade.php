@@ -1,0 +1,10 @@
+<script src="{{asset('fashi-master/js/jquery-3.3.1.min.js')}}"></script>
+<script src="{{asset('fashi-master/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('fashi-master/js/jquery-ui.min.js')}}"></script>
+<script src="{{asset('fashi-master/js/jquery.countdown.min.js')}}"></script>
+<script src="{{asset('fashi-master/js/jquery.nice-select.min.js')}}"></script>
+<script src="{{asset('fashi-master/js/jquery.zoom.min.js')}}"></script>
+<script src="{{asset('fashi-master/js/jquery.dd.min.js')}}"></script>
+<script src="{{asset('fashi-master/js/jquery.slicknav.js')}}"></script>
+<script src="{{asset('fashi-master/js/owl.carousel.min.js')}}"></script>
+<script src="{{asset('fashi-master/js/main.js')}}"></script>
